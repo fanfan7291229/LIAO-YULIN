@@ -1,0 +1,234 @@
+/* Universal reset: clear margin and padding for all elements */
+* {
+  margin: 0; /* reset outer margin */
+  padding: 0; /* reset inner padding */
+  box-sizing: border-box; /* include border and padding in element total width and height */
+}
+
+/* Body base font and background color */
+body {
+  font-family: Arial, sans-serif; /* default font family */
+  background-color: #eaeded; /* amazon light grey background */
+  color: #0f1111; /* standard text color */
+}
+
+/* Top navigation bar: parent container, fixed dark background */
+.top-nav {
+  width: 100%; /* full width of viewport */
+  height: 60px; /* fixed height for top bar */
+  background-color: #131921; /* dark amazon navigation background */
+  color: #ffffff; /* white text color */
+}
+
+/* Navigation inner wrapper for centering with max-width */
+.nav-container {
+  width: 1200px; /* fixed layout width */
+  margin: 0 auto; /* horizontal centering using margin auto */
+  height: 100%; /* fill parent height */
+}
+
+/* Logo section: floating left */
+.nav-logo {
+  float: left; /* arrange horizontally to the left */
+  width: 120px; /* fixed width for logo container */
+  height: 100%; /* fill parent height */
+  padding-top: 15px; /* top spacing */
+}
+
+/* Logo text styling */
+.logo-text {
+  font-size: 24px; /* large logo font size */
+  font-weight: bold; /* bold appearance */
+  color: #ffffff; /* white color */
+}
+
+/* Search bar wrapper: floating left with specific width */
+.nav-search {
+  float: left; /* arrange horizontally next to logo */
+  width: 600px; /* fixed width for search container */
+  height: 40px; /* height of search bar */
+  margin-top: 10px; /* vertical spacing from top */
+  margin-left: 50px; /* spacing from logo */
+}
+
+/* Search text input box */
+.search-input {
+  float: left; /* align input to left */
+  width: 530px; /* width of text input */
+  height: 100%; /* match container height */
+  padding-left: 10px; /* inner left padding */
+  border: none; /* remove default border */
+  border-radius: 4px 0 0 4px; /* round left corners */
+  font-size: 15px; /* font size */
+}
+
+/* Search action button */
+.search-btn {
+  float: left; /* align button next to input */
+  width: 70px; /* width of search button */
+  height: 100%; /* match container height */
+  background-color: #febd69; /* amazon orange button color */
+  border: none; /* remove border */
+  border-radius: 0 4px 4px 0; /* round right corners */
+  cursor: pointer; /* pointer cursor on hover */
+  font-weight: bold; /* bold text */
+}
+
+/* Right links container: floating right */
+.nav-right {
+  float: right; /* arrange elements to the far right */
+  height: 100%; /* fill parent height */
+  padding-top: 18px; /* vertical spacing */
+}
+
+/* Individual navigation link items */
+.nav-link {
+  display: inline-block; /* display as inline-block for spacing control */
+  color: #ffffff; /* white text color */
+  text-decoration: none; /* remove underline */
+  margin-left: 20px; /* spacing between links */
+  font-size: 14px; /* standard font size */
+}
+
+/* Sub navigation bar: light grey strip for categories */
+.sub-nav {
+  width: 100%; /* full width */
+  height: 40px; /* fixed height */
+  background-color: #232f3e; /* darker slate grey sub-nav background */
+}
+
+/* Sub navigation inner container */
+.sub-container {
+  width: 1200px; /* fixed layout width */
+  margin: 0 auto; /* horizontal centering */
+}
+
+/* Sub navigation list styles */
+.sub-list {
+  list-style: none; /* remove bullet points */
+}
+
+/* Sub navigation list items */
+.sub-list li {
+  float: left; /* arrange list items horizontally */
+}
+
+/* Sub navigation link anchor tags */
+.sub-link {
+  display: inline-block; /* block layout for padding */
+  height: 40px; /* match sub-nav height */
+  line-height: 40px; /* vertical centering of text */
+  padding: 0 15px; /* horizontal padding inside links */
+  color: #ffffff; /* white text color */
+  text-decoration: none; /* remove text decoration */
+  font-size: 14px; /* font size */
+}
+
+/* Sub-link hover pseudo-class style */
+.sub-link:hover {
+  border: 1px solid #ffffff; /* white border on hover */
+  height: 38px; /* adjust height to prevent layout shift with border */
+  line-height: 38px; /* adjust line height accordingly */
+}
+
+/* Main content wrapper */
+.main-content {
+  width: 1200px; /* fixed width matching containers */
+  margin: 0 auto; /* horizontal centering */
+}
+
+/* Banner image section container */
+.banner-section {
+  width: 100%; /* full width of main container */
+  margin-top: 15px; /* spacing above banner */
+}
+
+/* Banner image container box */
+.banner-img-box {
+  width: 100%; /* full width */
+  height: 300px; /* fixed banner display height */
+  background-color: #cccccc; /* fallback background color */
+}
+
+/* Banner image style */
+.banner-img {
+  width: 100%; /* fill parent width */
+  height: 100%; /* fill parent height */
+}
+
+/* Cards section container with parent height clearing via overflow: hidden */
+.cards-section {
+  width: 100%; /* full width */
+  margin-top: -150px; /* overlap banner to mirror amazon layout style */
+  position: relative; /* relative positioning to keep stack order */
+  overflow: hidden; /* clear float height collapse for child floats */
+  padding-bottom: 20px; /* bottom spacing */
+}
+
+/* Cards container wrapper */
+.cards-container {
+  width: 1220px; /* slightly wider to accommodate 4 columns with margins */
+}
+
+/* Individual product card container: floating left */
+.product-card {
+  float: left; /* arrange cards horizontally */
+  width: 285px; /* fixed width for card */
+  height: 420px; /* fixed height for card */
+  background-color: #ffffff; /* white card background */
+  margin-right: 20px; /* right spacing between cards */
+  margin-bottom: 20px; /* bottom spacing */
+  padding: 20px; /* inner padding */
+}
+
+/* Card title heading style */
+.card-title {
+  font-size: 21px; /* title font size */
+  color: #0f1111; /* dark title text */
+  margin-bottom: 15px; /* spacing below title */
+}
+
+/* Card image box container */
+.card-img-box {
+  width: 245px; /* inner image container width */
+  height: 300px; /* inner image container height */
+  background-color: #f7f7f7; /* light placeholder background */
+}
+
+/* Card image tag style */
+.card-img {
+  width: 100%; /* fill width */
+  height: 100%; /* fill height */
+}
+
+/* Card see more link style */
+.card-link {
+  display: block; /* block element for spacing */
+  margin-top: 10px; /* top spacing */
+  color: #007185; /* amazon link blue color */
+  text-decoration: none; /* remove underline */
+  font-size: 13px; /* font size */
+}
+
+/* Card see more hover pseudo-class */
+.card-link:hover {
+  text-decoration: underline; /* underline on hover */
+  color: #c7511f; /* orange hover accent color */
+}
+
+/* Footer section styling: full width dark footer */
+.footer-section {
+  width: 100%; /* full width */
+  height: 100px; /* fixed footer height */
+  background-color: #232f3e; /* dark slate footer background */
+  margin-top: 30px; /* top spacing */
+  text-align: center; /* center text content */
+  padding-top: 30px; /* vertical padding */
+}
+
+/* Footer text paragraph styling */
+.footer-text {
+  color: #cccccc; /* light grey text */
+  font-size: 13px; /* font size */
+  margin-bottom: 5px; /* line spacing */
+}
